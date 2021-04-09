@@ -1,0 +1,452 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+.nav{
+    background: #157ec7;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    box-shadow: 0px 1px 5px #505650;
+}
+.nav div{
+    width: 90%;
+}
+
+.nav .left{
+	display: flex;
+	align-items: center;
+}
+
+.nav .left .nombre-clase{
+	margin-left: 10px;
+	font-size: 31px;
+}
+
+.nav .left .grado-clase{
+	margin-left: 15px;
+    align-self: flex-end;
+    padding-bottom: 5px;
+    font-size: 14px;
+}
+
+.nav .right h3{
+    float: right;
+    padding-right: 50px;
+}
+
+/*Contenido*/
+
+body{
+    background: #f3f3f3;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+.container .editar{
+	display: block;
+    text-decoration: none;
+    color: #fff;
+    background: #157ec7;
+    width: 135px;
+    padding: 10px;
+    border-radius: 17px;
+    position: absolute;
+    top: 77px;
+    right: 8px;
+    transition: all 300ms ease;
+}
+.container .editar:hover{
+	background: #055bb3;
+	transform: scale(1.1);
+}
+
+.container h3{
+    margin: 20px 0; 
+    font-size: 20px; 
+    display: inline-block; 
+    color: #4a417d ;
+}
+.container .classes{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 150px;
+}
+
+.items-container{
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(auto-fill, 120px);
+    justify-content: center;
+}
+
+.item{
+    height: 120px;
+    border-radius: 15px;
+    position: relative;
+    text-align: center;
+    margin-bottom: 15px;
+ 
+}
+
+.item:hover{
+	cursor: pointer;
+}
+
+.item .contenido{
+    width: 85%;
+    height: 80%;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: relative;
+    top: 23px;
+    border-radius: 15px;
+
+    transition: all 300ms ease-in-out;
+}
+
+.points{
+	position: absolute;
+    top: 0;
+    right: -23px;
+    background: #ffffff;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.point{
+	width: 75%;
+    height: 75%;
+    background: #94a7a1;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: 900;
+}
+
+
+
+.mas{
+	top: -31px;
+    background: #03A9F4;
+}
+	
+.menos, .mas{
+	width: 30px;
+    height: 30px;
+    color:#fff;
+    font-weight: 900;
+}
+.menos{
+	top: 36px;
+    background: #ff9898;
+}
+
+.mas a, .menos a{
+	display: block;
+	text-decoration:none;
+	height: 100%;
+	width: 100%;
+	position: relative;
+	color: #fff;
+}
+
+.mas a p{
+	position: absolute;
+    left: 11px;
+    top: 7px;
+}
+
+.menos a p{
+	position: absolute;
+    left: 12px;
+    top: 1px;
+    font-size: 18px;
+    
+}
+
+
+.item .imgs{
+    height: 60%;
+    
+}
+.item .add img{
+   	width: 15px;
+}
+
+.item .add{
+    position: absolute;
+    top: 6px;
+    right: 6px;
+}
+
+.item .add-c{
+    height: 83px;
+    width: 106px;
+    background-color: #fff;
+    border: 1px dashed rgb(0, 174, 239);
+    color: #030303;
+    font-size: 14px;
+    cursor: pointer;
+    margin: auto;
+}
+
+.item .add-c a:hover{
+	color: rgb(46, 204, 113);	
+}
+
+.item .add-c a{
+	display:block;
+	font-size: 11px;
+	width:100%;
+    height: 100%;
+    padding-top: 30px;
+    color: rgb(0, 174, 239);
+}
+
+/*side*/
+
+.actions{
+    background: #fff;
+    color: cornflowerblue;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    border-top: 1px solid #aecbff;
+}
+
+.actions .actions-contenido{
+    width: 100%;
+    height: 25%;
+}
+.actions .actions-contenido:hover{
+    background-color: #f5f2f2;
+    cursor: pointer;
+}
+
+/*Creación de modal*/
+
+
+#modal-item{
+	margin: auto;
+	height: 350px;
+	width: 490px;
+	max-width:90%;
+	background: #fff;
+	padding: 20px;
+	border-radius: 5px;
+	position: relative;
+}
+#modal form{
+	display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+#modal form label{
+	color: rgb(0, 123, 255);
+}
+
+#modal .title{
+	width: 100%;
+	margin: auto;
+	border-bottom: 1px solid #007bff;
+    color: #007bff;
+}
+
+#modal .input{
+	margin: auto;
+	width: 100%;
+	padding: 8px;
+	border: 1px solid #007bff;
+	border-radius: 5px;
+	color: rgba(0,0,0,0.6);
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+#modal button{
+	font-size:1.2rem;
+	width: 100%;
+	border: none;
+	padding: 8px;
+	border-radius: 5px;
+	background: rgba(0, 123, 255,0.9);
+	color:#fff;
+	transition: all 300ms ease;
+}
+
+#modal button:hover{
+	cursor: pointer;	
+	background: rgba(0, 123, 255,1);
+}
+
+#close{
+	position: absolute;
+    top: -15px;
+    right: -15px;
+    height: 30px;
+    width: 30px;
+}
+#close:hover{
+	cursor:pointer;
+}
+/*picker*/
+	#modalPicker{
+        width: 100%;
+        height: 100vh;
+        display: none;
+        position: fixed;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0,0,0,0.3);
+        z-index: 1;
+    }
+
+    #containerPicker{
+        width: 100%;
+	    height: 100vh;
+	    background-color: #009688;
+	    position: absolute;
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    flex-direction: column;
+    }
+
+    .close{
+		position: absolute;
+	    color: #f00;
+	    z-index: 1;
+	    top: 0;
+	    right: 0;
+	    padding: 12px 14px;
+    	font-size: 18px;
+	    border: 0;
+	    border-radius: 5%;
+	    background: #fbf8f8;
+	    cursor: pointer;
+	    font-size: 15px;
+	    transition: all 200ms ease-in-out;
+	    font-weight: 900;
+    }
+    
+    .close:hover{
+    	background: #f00;
+    	color:#fff;
+    }
+    
+    #pick{
+	   	position: absolute;
+	    bottom: 66px;
+	    padding: 12px 25px;
+	    border: none;
+	    border-radius: 15px;
+	    background: #00BCD4;
+	    color: #fff;
+	    font-size: 16px;
+	    cursor: pointer;
+	    z-index: 1;
+	    transition: all 300ms ease-in-out;
+    }
+    
+    #pick:hover{
+    	transform: translateY(-10px);
+    }
+    
+	/*MODAL PUNTOS */
+	.modalPuntos{
+    width: 100%;
+    background-color: #00000040;
+    height: 100vh;
+    position: absolute;
+    z-index: 1;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    
+	}
+	
+	.puntos{
+	    width: 500px;
+	    height: 250px;
+	    background-color: #fff;
+	    display: flex;
+	    align-items: center;
+	    justify-content: space-around;
+	}
+	
+	.nombre{
+	    color: #fff;
+	    width: 100%;
+	    height: 50px;
+	    background-color: coral;
+	    display: flex;
+	    align-items: center;
+	    justify-content: center;
+	}
+	
+	.containerPuntos{
+	    width: 500px;
+	    height: 300px;
+	    background-color: #fff;
+	    display: flex;
+	    align-items: center;
+	    justify-content: space-around;
+	    flex-direction: column;
+	}
+	
+	.agregarPunto, .quitarPunto{
+	    width: 200px;
+	    height:  200px;
+	    background-color: #995f5f;
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	
+	}
+	
+	.agregarPunto:hover, .quitarPunto:hover{
+	    cursor: pointer;
+	}
+	/*Termina el modal puntos */
+    
+    @media (max-width: 1024px){
+	
+		.nav .left .grado-clase{
+			display: none;
+		}
+		
+		#music-container{
+			max-width: 90%;
+		}
+	}
+	
+	@media (max-width: 320px){
+		.picker-item{
+			height: 300px;
+		}
+	}

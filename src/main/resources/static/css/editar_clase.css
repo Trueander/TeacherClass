@@ -1,0 +1,217 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-evenly;
+}
+
+.clase-info{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.clase-info form{
+    width: 100%;
+}
+
+.label{
+    margin-top: 10px;
+}
+
+.input input, .input select{
+    width: 100%;
+    padding: 12px 8px;
+    margin: 10px 0 ;
+    border-radius: 3px;
+    border: none;
+    color: #808080;
+    outline-color: #3498db;
+    background: rgb(241, 240, 240);
+}
+
+.input select{
+    text-align: center;
+}
+
+
+.input input[type=submit]{
+    background-color: rgb(52, 152, 219);
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 300ms ease;
+    outline: none;
+    margin-bottom: 30px;
+}
+
+.input input[type=submit]:hover{
+    background-color: rgb(0, 92, 197);
+}
+
+.main-clase{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content: space-around;
+    height: 500px;
+}
+
+
+
+.titulo{
+    width: 100%;
+    margin: 0 auto;
+    height: 10%;
+}
+
+.titulo-lista{
+    width: 95%;
+    margin: auto;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.titulo-lista a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    background-color: rgb(52, 152, 219);
+    padding: 5px 8px;
+    transition: all 300ms ease;
+    border-radius: 10px;
+}
+
+.titulo-lista a:hover{
+    background-color: rgb(0, 92, 197);
+}
+
+.lista-estudiantes{
+    width: 600px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.tabla-estudiantes{
+    overflow: auto;
+    height: 500px;
+}
+
+table{
+	margin: 0 auto;
+	width: 95%;
+	margin-top: 20px;
+	border-collapse: collapse;
+	border-radius: 6px 6px 0 0;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+
+table tbody tr td{
+	padding: 5px 0;
+}
+
+tbody tr {
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+table tbody tr:nth-of-type(even){
+	background-color: #f3f3f3;
+}
+
+.img img{
+    width:30px;
+}
+
+.reporte img, .delete img{
+    width: 25px;
+    
+}
+
+.nombre{
+    color: #907070;
+    font-size: 1rem;
+    align-self: center;
+    width: 60%;
+}
+
+
+.submit{
+	padding: 1rem 3.5rem;
+    border-radius: 25px;
+    border: none;
+    background: #559fea;
+    color: #fff;
+    font-size: 15px;
+    transition: all 200ms ease-in;
+    cursor: pointer;
+}
+
+.submit:hover{
+	background: #2980b9;
+	transform: translateY(-5px);
+}
+
+
+
+::-webkit-scrollbar{
+    width: 6px;
+    background-color: #f3f3f3;
+}
+
+::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background-color: #565b5e;
+}
+
+.back{
+	position: absolute;
+    top: 0;
+    left: 0;
+    background: rgb(241 240 240);
+    padding: 15px 20px;
+    color: #808080;
+    font-size: 18px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.back:hover{
+	background: rgb(192, 192, 192);
+	color: #fff;
+}
+
+
+@media (max-width: 840px){
+    .container{
+        height: 900px;
+        align-items: center;
+    }
+
+    .main-clase{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .clase-info, .lista-estudiantes{
+        width: 100%;
+    }
+
+    .titulo-lista h2{
+        font-size: 20px;
+    }
+}

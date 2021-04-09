@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+#modal-music{
+    margin: auto;
+    width: 101%;
+    height: 100%;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+#music-container{
+    position: absolute;
+    z-index:1;
+    width: 375px;
+    height: 500px;
+    background: #03A9F4;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 25px;
+}
+
+#radio{
+    width: 200px;
+    border-radius: 24%;
+    padding: 18px;
+    
+}
+
+#radio, #fun, #yoga{
+    transition: all 500ms ease-in-out;
+}
+
+#playR, #playA{
+    box-shadow: 1px 1px 30px #00ffd0;
+    border-radius: 50%;
+    cursor: pointer;
+}
+#stopA, #stopR{
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 1px 1px 30px #fff;
+}
+
+#active, #relax{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 150px;
+    align-items: center;
+    
+}
+
+#type{
+    width: 350px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#closeMusic{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 12px 14px;
+    font-size: 18px;
+    font-weight: 900;
+    color: #E91E63;
+    border: none;
+    border-radius: 13px;
+    line-height: 22px;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+#closeMusic:hover{
+    background: #E91E63;
+    color: #fff;
+}
+@keyframes dance{
+    from{
+        transform: scale(1.1);
+
+    }to{
+        transform: scale(1);
+
+    }
+}
+
+@keyframes relax{
+    from{
+        transform: translateY(-10px);
+
+    }to{
+        transform: translateY(-5px);
+    }
+}

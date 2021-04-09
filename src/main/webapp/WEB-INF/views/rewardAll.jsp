@@ -1,0 +1,59 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Premios</title>
+<link rel="stylesheet" href="<c:url value='/css/style-reward.css'/>">
+<link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+<c:url var="img" value="/imagenes" />
+<div class="container">
+	<div id="modal"
+		style="margin: auto; width: 100%; height: 100%; position: fixed; top: 0; left: 0; background: rgba(0, 0, 0, 0.7); display: none; z-index: 1;">
+		<div id="modal-item">
+			<img Id="close" src="${img}/delete.svg">
+			<h3 class="title">Añadir estudiante</h3>
+			<form:form method="post" modelAttribute="premio">
+				<form:input class="input" type="text" path="nombre_premio"
+					placeholder="Ingrese el nombre del premio" />
+				<div
+					style="border-top: 1px solid rgba(0, 123, 255, 0.9);; margin-top: 40px;">
+					<button>Añadir</button>
+				</div>
+			</form:form>
+		</div>
+	</div>
+	<a href="<c:url value='/clase/${clase.getId_clase()}'/>" class="button">Regresar</a>
+	<div id="users">
+			<div class="title"><h1 style="text-align: center;">Lista de Premios</h1></div>
+			<div class="table">
+				<table>
+					<thead>
+						<tr>
+							<th><b>Clase</b></th>
+							<th><b>Premio</b></th>
+							<th><b>Estudiante</b></th>
+						</tr>
+					</thead>
+					<tbody>
+						<c:forEach var="card" items="${rewards}">
+							<tr>
+								<td>${clase.getNombre()}</td>
+								<td>${card.nombre_premio}</td>
+								<td>${card.estudiante.getNombre()} ${card.estudiante.getApellido()}</td>
+							</tr>
+						</c:forEach>
+					</tbody>
+				</table>
+				</div>
+		</div>
+</div>	
+	<script type="text/javascript" src="<c:url value='/js/script.js'/>"></script>
+</body>
+</html>

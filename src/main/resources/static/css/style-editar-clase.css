@@ -1,0 +1,146 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+}
+
+body{
+	background: #f3f3f3;
+}
+
+.full{
+    width: 100%;
+    color: #559fea;
+    font-size: 18px;
+    font-family: 'Poppins', cursive;
+    position: absolute;
+    top: 149px;
+    text-align: center;
+}
+
+#modal{
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    
+}
+
+.img{
+    margin: 15px 0;
+    width: 100px;
+}
+
+#modal-item{
+	height: 600px;
+    width: 600px;
+
+    padding: 10px;
+    background: #fff;
+}
+
+.errors{
+	display: flex;
+	flex-direction: column;
+	height: 80px;
+	width: 60%;
+}
+
+.errors span{
+	color: red;
+}
+
+form{
+	justify-content: space-around;
+    align-items: center;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+}
+
+.class{
+	width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;;
+}
+
+.class a{
+	display: block;
+    text-decoration: none;
+    width: 20px;
+    position: absolute;
+    top: -28px;
+    right: -10px;
+    background: #559fea;
+    color: white;
+    width: 73px;
+    padding: 8px;
+    transition:all 300ms ease;
+}
+
+
+h3{
+	font-size: 1.5rem;
+	color: #0087e0;
+}
+
+
+.submit{
+	padding: 1rem 3.5rem;
+    border-radius: 25px;
+    border: none;
+    background: #559fea;
+    color: #fff;
+    font-size: 15px;
+    transition: all 200ms ease-in;
+    cursor: pointer;
+    margin-top:25px;
+}
+
+.submit:hover{
+    background: #2980b9;
+}
+
+.input, select{
+    margin: 10px 0;
+	padding: 7px 8px;
+	width: 300px;
+    border: 1px solid #559fea;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    color: #808080
+}
+
+select{
+	width: 320px;
+}
+
+
+.titulo-clase{
+	display: flex;
+	align-items: center;
+	width: 100%;
+    justify-content: center;
+
+    flex-direction: column;
+}
+
+.titulo-clase p{
+	margin-right: 10px;
+	font-size: 1.1rem;
+	color: #808080
+}
+
+::-webkit-scrollbar{
+    width: 1px;
+    background-color: #f3f3f3;
+}
+
+::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background-color: #85b7d8;
+}
