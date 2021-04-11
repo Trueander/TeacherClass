@@ -15,11 +15,10 @@
 
 	
 	<div class="container">
-	<a href="<c:url value='/dashboard'/>" class="back">Regresar</a>
         <div class="main">
-            <form:form method="post" modelAttribute="profesor">
+            <form:form method="post" modelAttribute="grado">
                 <div class="title">
-                    <h2>Registrar</h2>
+                    <h2>Registrar grado</h2>
                 </div>
                 <div class="label">
                     <label for="">Nombre</label>
@@ -29,31 +28,10 @@
                     <form:input type="text" path="nombre"/>
                     <form:errors path="nombre"/> 
                 </div>
-                <div class="label">
-                    <label for="">Apellido</label>
-                </div>
-                <div class="input error">
-                    <form:input type="text" path="apellidos"/>
-                    <form:errors path="apellidos"/> 
-                </div>
-                <div class="label">
-                    <label for="">Correo</label>
-                </div>
-                <div class="input error" >
-                    <form:input type="text" path="username"/>
-                    <form:errors path="username"/> 
-                </div>
-                <div class="label">
-                    <label for="">Contrase&ntilde;a</label>
-                </div>
-                <div class="input error" >
-                    <form:input type="password" path="password"/>
-                    <form:errors path="password"/> 
-                </div>
 
 
                 <div class="input">
-                    <input type="submit" value="Registrar">
+                    <input type="submit" value="Actualizar">
                 </div>
             </form:form>
         </div>

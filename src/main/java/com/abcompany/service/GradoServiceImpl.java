@@ -32,4 +32,10 @@ public class GradoServiceImpl implements GradoService{
 	public void insertar(Grado grado) {
 		gradoDao.save(grado);
 	}
+
+	@Override
+	@Transactional(readOnly = false)
+	public void eliminar(Integer id_grado) {
+		gradoDao.deleteById(id_grado);
+	}
 }

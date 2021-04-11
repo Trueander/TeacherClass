@@ -166,14 +166,45 @@ public class ClaseController {
 		return "redirect:/dashboard";
 	}
 	
+	@GetMapping("/grados")
+	public String listaGrados(Model model) {
+		model.addAttribute("grados", gradoService.findAll());
+		
+		
+		return "lista_grados";
+	}
 	
+	@GetMapping("/grados/{id_grado}")
+	public String editarGrado(@PathVariable Integer id_grado,Model model) {
+		Grado gradoEncontrado = gradoService.findById(id_grado);
+		model.addAttribute("grado", gradoEncontrado);
+		
+		return "editar_grado";
+	}
 	
+	@PostMapping("/grados/{id_grado}")
+	public String editarGrado_POST(@PathVariable Integer id_grado, Grado grado) {
+		gradoService.insertar(grado);
+		
+		return "redirect:/grados";
+	}
 	
-	
-	
-	
-	
-	
+	@GetMapping("/grados/eliminar/{id_grado}")
+	public String eliminar(@PathVariable Integer id_grado) {
+		
+		
+		//SOLUCIONAR PARA QUE NO HAYA PROBLEMAS DE RELACIÓN CON CLASE
+		Grado gradoEncontrado = gradoService.findById(id_grado);
+		if(gradoEncontrado.getClaseList().size() > 0) {
+			
+			return "redirect:/grados";
+		}
+		
+		
+		gradoService.eliminar(id_grado);
+		
+		return "redirect:/grados";
+	}
 	
 	
 	

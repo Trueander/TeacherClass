@@ -54,6 +54,9 @@
 						<a href="<c:url value='/editar_profesor/${profesor.getId_profesor()}'/>">Editar</a>
 					</div>
 					<div>
+						<a href="<c:url value='/grados'/>">Grados</a>
+					</div>
+					<div>
 						<a href="<c:url value='/logout'/>">Logout</a>
 					</div>
 				</div>
@@ -73,7 +76,7 @@
 							</a>
 						</div>
 						<div class="class-name">
-							<h2 style="text-align: center; padding-top: 20px;">${card.nombre} </h2>
+							<h3 style="text-align: center; padding-top: 20px;">${card.nombre} </h3>
 						</div>
 						<div class="class-info">
 							<div style="width: 100%; text-align: center;">

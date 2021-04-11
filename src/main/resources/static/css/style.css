@@ -51,12 +51,12 @@
 }
 
 .nav .drop-content div:hover {
-	background-color: rgba(51, 217, 178,1.0);
+	background-color: rgb(236 241 240);
 	border-radius: 5px;
 }
 
 .nav .drop-content div a:hover {
-	color: #fff;
+	color: #000;
 }
 
 .nav .drop-content {
@@ -100,9 +100,10 @@ body{
     height: 150px;
     background: rgba(255,255,255,0.8);
     border-radius: 15px;
-    color:#000;
-    border: 1px solid rgb(95, 153, 226);
+    color: #000;
+    /* border: 1px solid rgb(95, 153, 226); */
     position: relative;
+    box-shadow: 2px 3px 7px -8px;
 }
 
 .item .class-name{
@@ -128,15 +129,15 @@ body{
     margin: auto;
     text-decoration: none;
     text-align: center;
-    background: #3c82bd;
+    background: #157ec7;
     color: white;
     padding: 6px 0;
-    border-radius: 25px;
+    border-radius: 10px;
     transition: all 300ms ease-in;
 }
 
 .item .enter a:hover{
-	background: rgba(51, 217, 178,1.0);
+	background: #10649e;
 }
 
 .item .config{
@@ -208,21 +209,21 @@ body{
 .new{
 	
 	border-radius: 50px;
-	border:2px dotted rgb(148, 166, 214);
+	border:2px dotted #6c757d;
 }
 
 
 #button{
-	background: rgba(51, 217, 178,1.0);
+	background: #6c757d;
 	color: #f3f3f3;
 	
 }
 
 #button:hover{
-	opacity: 0.8;
+	background: #4f555a;
 }
 
-//Creación de modal
+
 #modal{
 	
 }

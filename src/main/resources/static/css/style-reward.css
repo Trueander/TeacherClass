@@ -16,6 +16,19 @@
     margin: 10px;
 }
 
+.btn-editar, .btn-eliminar{
+	padding: 8px 24px;
+    background: #ff3838;
+    border-style: none;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.btn-editar{
+	background-color: #2196f3;
+}
+
 
 #users table{
 	width: 100%;
@@ -83,7 +96,7 @@ tbody td{
 
 
 
-/*Creación de modal*/
+/*Creaciï¿½n de modal*/
 #modal{
 	
 }

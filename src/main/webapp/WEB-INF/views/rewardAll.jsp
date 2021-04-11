@@ -14,22 +14,9 @@
 <body>
 <c:url var="img" value="/imagenes" />
 <div class="container">
-	<div id="modal"
-		style="margin: auto; width: 100%; height: 100%; position: fixed; top: 0; left: 0; background: rgba(0, 0, 0, 0.7); display: none; z-index: 1;">
-		<div id="modal-item">
-			<img Id="close" src="${img}/delete.svg">
-			<h3 class="title">Añadir estudiante</h3>
-			<form:form method="post" modelAttribute="premio">
-				<form:input class="input" type="text" path="nombre_premio"
-					placeholder="Ingrese el nombre del premio" />
-				<div
-					style="border-top: 1px solid rgba(0, 123, 255, 0.9);; margin-top: 40px;">
-					<button>Añadir</button>
-				</div>
-			</form:form>
-		</div>
+
 	</div>
-	<a href="<c:url value='/clase/${clase.getId_clase()}'/>" class="button">Regresar</a>
+	<a href="<c:url value='/dashboard'/>" class="button">Regresar</a>
 	<div id="users">
 			<div class="title"><h1 style="text-align: center;">Lista de Premios</h1></div>
 			<div class="table">

@@ -15,6 +15,7 @@
 
 	
 	<div class="container">
+	<a href="<c:url value='/grados'/>" class="back">Regresar</a>
         <div class="main">
             <form:form method="post" modelAttribute="grado">
                 <div class="title">
