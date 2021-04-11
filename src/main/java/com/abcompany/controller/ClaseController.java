@@ -163,7 +163,7 @@ public class ClaseController {
 	public String crearGrado_POST(Grado grado) {
 		gradoService.insertar(grado);
 		
-		return "redirect:/dashboard";
+		return "redirect:/grados";
 	}
 	
 	@GetMapping("/grados")
